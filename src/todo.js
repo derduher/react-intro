@@ -8,12 +8,12 @@ export default class ToDo extends Component {
   onEdit = e =>
     this.setState({isEditing: true, text: this.props.text})
 
-  onChange = e => 
+  onChange = e =>
     this.setState({text: e.target.value})
 
   commitEdit = e => {
     this.setState({isEditing: false})
-    this.props.commitEdit({id: this.props.id, text: this.state.text})
+    this.props.commitEdit({id: this.props.todoId, text: this.state.text})
   }
 
   cancelEdit = e => {
